@@ -23,35 +23,35 @@ int main()
         switch(num)
         {
             case 1:
-    	name = malloc(20*sizeof(char));
-    	printf("Insert Username: ");
-    	scanf("%254s", name);
-    				if(strcmp(name,"root") == 0)
-              {
-    	    printf("root not allowed.\n");
-    	    strcpy(name,"");
-    	}
-    	break;
+    		name = malloc(20*sizeof(char));
+    		printf("Insert Username: ");
+    		scanf("%254s", name);
+    		if(strcmp(name,"root") == 0)
+        	{
+    	    		printf("root not allowed.\n");
+    	    		strcpy(name,"");
+    		}
+    		break;
             case 2:
-              pass = malloc(20*sizeof(char));
-    	printf("Insert Password: ");
-    	scanf("%254s", pass);
-    	break;
+              	pass = malloc(20*sizeof(char));
+    		printf("Insert Password: ");
+    		scanf("%254s", pass);
+    		break;
             case 3:
-    	free(pass);
-    	free(name);
-    	break;
+    		free(pass);
+    		free(name);
+    		break;
             case 4:
-    	if(strcmp(name,"root") == 0)
-    	{
-    	    printf("You just used after free!\n");
-    	    system("/bin/sh");
-    	    exit(0);
-               }
-    	break;
+    		if(strcmp(name,"root") == 0)
+    		{
+    	    		printf("You just used after free!\n");
+    	    		system("/bin/sh");
+    	    		exit(0);
+               	}
+    		break;
             case 5:
-    	exit(0);
-          }
-      }
+    		exit(0);
+        }
+    }
 }
 
